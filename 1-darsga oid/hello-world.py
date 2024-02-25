@@ -2,7 +2,7 @@
 """
 Created on Wed Nov 22 07:26:22 2023
 
-@author: User
+@author: Magomedjan
 """
 
 print("Hello world!")
