@@ -17,7 +17,7 @@ Python = {'integer':'butun son',
             'input':"foydalnuvchi qiymat kiritishi",
             'print':"ekranga chqarish",
                    'items()':"lugat elementlarini chiqarish",
-                   
+                   "keys()":"lug'at kalitini chiqarish"
                    
                    }
 
