@@ -26,11 +26,14 @@ talaba_1['kurs'] = 4
     
 telephones = {
     "ali":"IPhone X",
-    "vali":"Samsung A50",
+    "vali":"Samsung Galaxy S23",
     "nosir":"Mi 13 Pro",
     "g'ani":"IPhone 15 pro Max",
-    "nabi":"Artel",
-    "hodi":"IPhone X"
+    "nabi":"Samsung zet fold",
+    "hodi":"IPhone X",
+    "nodir":"Honor 6b",
+    "shodi":"Samsung Galaxy S23",
+    'lola':"Honor 6b"
     }
 #for t, v in telephones.items():
 #    print(f"          {t.title()}ning telefoni: {v} \n")
@@ -44,18 +47,38 @@ mahsulotlar = {
     "uzum":25000,
     "apeslin":15000
     }
-print("Do'kondagi mahsulotlar:")
-for mahsulot in mahsulotlar.keys():
-    print(mahsulot)
+#print("Do'kondagi mahsulotlar:")
+#for mahsulot in mahsulotlar.keys():
+#    print(f"- {mahsulot}")
 
+#print("\n Do'kondagi mahsulotlar:")
+#for mahsulot in sorted(mahsulotlar):
+#    print(f" - {mahsulot}")
 
+#shopping = ["baliq", "suv", "nok", "uzum", "sabzi", "olma"]
+#for mahsulot in mahsulotlar:
+#    if mahsulot in shopping:
+#        print(f"\n-{mahsulot.title()} {mahsulotlar[mahsulot]} so'm")
+#print("\n Iltimos do'koningizga: ")
+#for buyum in shopping:
+#    if buyum not in mahsulotlar:
+#        print(f"- {buyum.title()}")
+#print(" mahsulotlarni ham olib keling!")
+#sorted ni qullash
+#print(sorted(mahsulotlar))
 
+# Value() ni qo'llash
+#print("Talabalar foydalanadigan telefonlar: ")
+#for phone in sorted(telephones.values()):
+#    print(f"{phone}\n")
 
-
-
-
-
-
+print("Talabalar foydalanadigan telefonlar: ")
+for phone in sorted(set(telephones.values())):
+    print(phone)
+    
+                    #Set() ruyxati
+toys = {"ball", 'car', 'car', 'bear', 'teddy', 'ball'}
+print(toys)
 
 
 
