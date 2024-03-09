@@ -35,8 +35,8 @@ telephones = {
     "shodi":"Samsung Galaxy S23",
     'lola':"Honor 6b"
     }
-#for t, v in telephones.items():
-#    print(f"          {t.title()}ning telefoni: {v} \n")
+for t, v in telephones.items():
+    print(f"          {t.title()}ning telefoni: {v} \n")
     
     
 mahsulotlar = {

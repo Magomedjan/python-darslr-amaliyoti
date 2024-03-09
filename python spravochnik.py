@@ -5,23 +5,26 @@ Created on Sun Mar  3 20:18:01 2024
 @author: Magomedjan
 """
                         #PYTHON BO"YICHA SPRAVOCHNIK 
-Python = {'integer':'butun son', 
-            'float':'unlik son', 
-            'string':'matn', 
+Python = {  "boolean":"mantiqiy qiymat",
+            "float":"o'nlik son",
+            "integer":"Butb son",
+            "string":"matn",
+            "del":"O'chirish",
+            "for":"qayta qayta bajarish tcikli",
             'if':"agar funk", 
             'else':'aks holda',
-            'for':"uchun",
             'in':"ichida",
-            'del':"yo'q qilish",
-            'title':"bosh harf",
-            'input':"foydalnuvchi qiymat kiritishi",
+            'title':"matnni bosh harf qilish",
+            'input':"foydalnuvchi qiymatini kiritish",
             'print':"ekranga chqarish",
-                   'items()':"lugat elementlarini chiqarish",
-                   "keys()":"lug'at kalitini chiqarish",
-                   "sorted()":"Sortirovat qilish",
-                   "value()":"lug'at  qiymatini chiqarish",
-                   "set()":"takrorlashni olib tahslash"
-                   }
+            'items()':"lugat elementlarini chiqarish",
+            "keys()":"lug'at kalitini chiqarish",
+            "sorted()":"Sortirovat qilish",
+            "value()":"lug'at  qiymatini chiqarish",
+            "set()":"takrorlashni olib tahslash",
+            ".lower()":"matnni kichik harf qilish",
+            ".get()":"lug'at ichidan chiqarb, javob berish"
+            }
 
   
          lugat = input("pythonga oid suz kiriting: \n>>>").lower()
