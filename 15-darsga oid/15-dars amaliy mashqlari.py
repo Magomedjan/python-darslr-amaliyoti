@@ -92,7 +92,7 @@ menu = {
         "ko'fta shashlik":12000,
         "kuskovoy shashlik mol go'shti":13000,
         "kuskovoy shashlik qo'y go'shti":13000,
-        "Uygur jizi":50000,
+        "uygur jizi":50000,
         'oddiy jiz':48000,
         "lag'mon":33000,
         "tabaka":35000,
@@ -101,17 +101,17 @@ menu = {
         'qovurma baliq':60000
        }
 print("3ta taomga buyurtma bering: ")
-z_taom = []
-z_taom["1-taom"] = input("1-taomni kiriting:>>>")
-z_taom["2-taom"] = input("2-taomni kiriting:>>>")
-z_taom["3-taom"] = input("3-taomni kiriting:>>>")
-for t,n in z_taom.items():
-    print(f"{t}:{n}")
-taom = menu.get(n)
-if taom == None:
-    print(f"{n} menuda yo'q")
-else:
-    print()
+buyurtmalar = []
+for n in range(3):
+    buyurtmalar.append(input(f"{n+1}-taom:>>>").lower())
+for buyurtma in buyurtmalar:
+    if buyurtma in menu:
+        print(f"{buyurtma.title()} : {menu[buyurtma]}")
+    else:
+        print(f"Bizda menyuda {buyurtma} yo'q")
+        
+
+
  
        
      
