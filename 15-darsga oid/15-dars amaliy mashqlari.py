@@ -54,13 +54,13 @@ davlat_poyt = {
     "Hindiston":"Dehli"
     }
 
-print("Dunyo davatlari: ")
-for dav in sorted(davlat_poyt.keys()):
-    print(dav.upper())
+#print("Dunyo davatlari: ")
+#for dav in sorted(davlat_poyt.keys()):
+#    print(dav.upper())
 
-print(" \nDavlatlar potaxtlari: ")    
-for poy in sorted(davlat_poyt.values()):
-    print(poy.title())
+#print(" \nDavlatlar potaxtlari: ")    
+#for poy in sorted(davlat_poyt.values()):
+#    print(poy.title())
     
 
 
@@ -109,7 +109,7 @@ for buyurtma in buyurtmalar:
         print(f"{buyurtma.title()} : {menu[buyurtma]}")
     else:
         print(f"Bizda menyuda {buyurtma} yo'q")
-        
+        buyurtmalar.append(input(f"{buyurtma} o'rniga boshq buyurtma berinf: >>>").lower())       
 
 
  
