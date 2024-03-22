@@ -81,41 +81,41 @@ for malibu in malibus[:15]:
 #for malibu in malibus:
 #    print(malibu)
 
-for malibu in malibus[15:30]:
-    malibu['rangi']=['qora']
-    
-for malibu in malibus[30:]:
-    malibu['rangi']=['qora']
-    malibu['korobka']=['mexanika']
+#for malibu in malibus[15:30]:
+#    malibu['rangi']=['qora']
+#    
+#for malibu in malibus[30:]:
+#    malibu['rangi']=['qora']
+#    malibu['korobka']=['mexanika']
    
 #for malibu in malibus:
 #    print(malibu)
 
-for malibu in malibus:
-    if malibu['korobka']=='avto':
-        malibu['narxi']=40000
-    else:
-        malibu['narxi']=35000
+#for malibu in malibus:
+#    if malibu['korobka']=='avto':
+#        malibu['narxi']=40000
+#    else:
+#        malibu['narxi']=35000
 
-for malibu in malibus:
-    print(malibu)
+#for malibu in malibus:
+#    print(malibu)
 
 
                     #Lug'at ichida ro'yxat yaratish
                     
 
-dasturchilar = {
-                'ali':['c++', 'python'],
-                'vali':['js', 'css', 'html'],
-                'nabi':['php', 'SQL'],
-                "g'ani":['python', 'php'],
-                'maryam':['c++', 'c#']
-                }
+#dasturchilar = {
+#                'ali':['c++', 'python'],
+#                'vali':['js', 'css', 'html'],
+#                'nabi':['php', 'SQL'],
+#                "g'ani":['python', 'php'],
+#                'maryam':['c++', 'c#']
+#                }
 
-for ism, tillar in dasturchilar.items():
-    print(f"\n{ism.title()} quyidagi dasturlash tillarini biladi : ", end='' )
-    for til in tillar:
-        print(f" {til.upper()} " , end='' )
+#for ism, tillar in dasturchilar.items():
+#    print(f"\n{ism.title()} quyidagi dasturlash tillarini biladi : ", end='' )
+#    for til in tillar:
+#        print(f" {til.upper()} " , end='' )
         
         
                     #LUG'AT ICHIDA LUG'AT YARATISH
@@ -134,14 +134,91 @@ hamkasblar = {
                        'tillar':['php', 'SQL']}
             }
 
-for ism, info in hamkasblar.items():
-    print(f"\n{ism.title()} {info['familiya'].title()}."
-          f"{info['tyil']} yilda tug'ilgan."
-          f"\nMa'lumoti: {info['malumot']}. \nQuyidagi tillarni biladi: ")
-    for til in info['tillar']:
-        print(til.upper())
+#for ism, info in hamkasblar.items():
+#    print(f"\n{ism.title()} {info['familiya'].title()}."
+#          f"{info['tyil']} yilda tug'ilgan."
+#          f"\nMa'lumoti: {info['malumot']}. \nQuyidagi tillarni biladi: ")
+#    for til in info['tillar']:
+#        print(til.upper())
+
+                            #15 DARS AMALYIOTI
+
+# 1/ Adabiyot (ilm-fan, san'at, internet) olamidagi 4 ta 
+# mashxur shaxlar haqidagi ma'lumotlarni lug'at ko'rinishida 
+# saqlang. Lug'atlarni bitta ro'yxatga joylang, va har bir 
+# shaxs haqidagi ma'lumotni konsolga chiqaring.
+
+shaxs1 = {
+          'ism':"Alisher",
+          'sharif':'Navoiy',
+          'tyil':'1441',
+          'tjoy':'hirot',
+          'faoliyat':'shoir',
+          'ijodi':['Xamsa', 'Majolis un-nafois', 'Xazoyin ul-maoniy', 'Mahbub ul-qulub']
+          } 
+
+shaxs2 = {
+          'ism':"Muhammad",
+          'sharif':'al-Xorazmiy',
+          'tyil':'780',
+          'tjoy':'Xorazm',
+          'faoliyat':'olim',
+          'ijodi':['Fi xisab al-Xind', 'Aljabr val muqobala', 'Arifmetika', 'Zij']
+          } 
+
+shaxs3 = {
+          'ism':"Abu Abdulloh Muhammad",
+          'sharif':'Al Buxoriy',
+          'tyil':'810',
+          'tjoy':'Buxoro',
+          'faoliyat':'muhaddis olim',
+          'ijodi':['Al-jomeʼ as-Sahih', 'Al-adab al-mufrad', 'At-tarix al-kabir', 'At-tarix as-sagʻir', 'At-tarix al-avsat', 'At-tafsir al-kabir', 'Birrul volidayn', 'Asmo as-sahoba', 'Kunyalar' ]
+          } 
+
+shaxs4 = {
+          'ism':"Stiv",
+          'sharif':'Jobs',
+          'tyil':'1955',
+          'tjoy':'San Fransizko',
+          'faoliyat':'ixtirochi-tadbirkor',
+          'ijodi':['apple iphone', 'ipad', 'itune', 'imac', 'ipod']
+          } 
+
+shaxslar = [shaxs1, shaxs2, shaxs3, shaxs4]
+for shaxs in shaxslar:
+    print(f"\n{shaxs ['ism']} "
+          f"{shaxs ['sharif']} " 
+          f"{shaxs['tyil']} yilda " 
+          f"{shaxs['tjoy']}da tug'ilgan. "
+          f"Taniqli {shaxs['faoliyat']}. "
+          f"Uning ijodi namunalari: ")
+ 
+# 2/ Yuqoridagi lug'atlarga har bir shaxsning mashxur 
+# asarlari ro'yxatini ham qo'shing. For tsikli yordamida
+# muallifning ismi va uning asarlarini konsolga chiqaring.
+
+for ijod in shaxs['ijodi'].items():      
+       print (f"{ijod['ijodi']}")
+
+# 3/ Oila a'zolaringiz (do'stlaringiz) dan 3 ta sevimli 
+# kino-seriali haqida so'rang. Do'stingiz ismi kalit, 
+# uning sevimli kinolarini esa ro'yxat ko'rinishida 
+# lug'artga saqlang.  Natijani konsolga chiqaring.
 
 
+
+# 4/ Davlatlar degan lug'at yarating, lug'at ichida bir
+# nechta davlatlar haqida ma'lumotlarni lug'at ko'rinishida 
+# saqlang. Har bir davlat haqida ma'lumotni konsolga chiqaring.
+
+
+
+# 5/ Yuqoridagi dasturga o'zgartirish kiriting: 
+# konsolga barcha davlatlarni emas, foydalanuvchi 
+# so'ragan davlat haqida ma'lumot bering. Agar 
+# davlat sizning lug'atingizda mavjud bo'lmasa, 
+# "Bizda bu davlat haqida ma'lumot yo'q" degan 
+# xabarni chiqaring.
 
 
 
