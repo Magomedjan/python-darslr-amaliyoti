@@ -192,24 +192,81 @@ for shaxs in shaxslar:
           f"{shaxs['tjoy']}da tug'ilgan. "
           f"Taniqli {shaxs['faoliyat']}. "
           f"Uning ijodi namunalari: ")
- 
+    for ijod in shaxs['ijodi']:
 # 2/ Yuqoridagi lug'atlarga har bir shaxsning mashxur 
 # asarlari ro'yxatini ham qo'shing. For tsikli yordamida
 # muallifning ismi va uning asarlarini konsolga chiqaring.
-
-for ijod in shaxs['ijodi'].items():      
-       print (f"{ijod['ijodi']}")
+    
+       print (f" - {ijod.title()}")
 
 # 3/ Oila a'zolaringiz (do'stlaringiz) dan 3 ta sevimli 
 # kino-seriali haqida so'rang. Do'stingiz ismi kalit, 
 # uning sevimli kinolarini esa ro'yxat ko'rinishida 
 # lug'artga saqlang.  Natijani konsolga chiqaring.
 
+yaqinlar={
+            'xotin':['Hukmdor Usmon', 'Mehmonjonlardan aylanay', 'Kelgindi kelin'],
+            'nodir':['Vir va Zarra', 'Taksi 1-5', 'Snayper'],
+            'akmal':['Terminator', 'Ikkili zarba', 'Begona']
+            }
+#for yaqin, kinolar in yaqinlar.items():
+#    print(f"\n{yaqin.title()}ning eng sevimli kinolari: ")
+#    for kino in kinolar:
+#        print(f" - {kino}")
+        
 
-
+    
 # 4/ Davlatlar degan lug'at yarating, lug'at ichida bir
 # nechta davlatlar haqida ma'lumotlarni lug'at ko'rinishida 
 # saqlang. Har bir davlat haqida ma'lumotni konsolga chiqaring.
+
+davlatlar = {
+                "o'zbekiston":{
+                                'nomi':"O'zbekiston Respublikasi",
+                                'davlat tuzumi':'Suveren demokratik davlat',
+                                'poytaxti':'Toshkent',
+                                'aholisi':36_000_000,
+                                'maydoni':447_400,
+                                'valyuta':"so'm"
+                                },
+                
+                "qozog'iston":{
+                                'nomi':"Qozog'iston Respublikasi",
+                                'davlat tuzumi':'demokratik davlat',
+                                'poytaxti':'Ostona',
+                                'aholisi':20_000_000,
+                                'maydoni':2_729_400,
+                                'valyuta':"tenge"
+                                },
+                "rossiya":{
+                                'nomi':"Rossiya federativ Respublikasi",
+                                'davlat tuzumi':'demokratik davlat',
+                                'poytaxti':'Moskva',
+                                'aholisi':144_000_000,
+                                'maydoni':17_100_000,
+                                'valyuta':"rubl"
+                                },
+                "aqsh":{
+                                'nomi':"Amerika qo'shma shtatlari",
+                                'davlat tuzumi':'demokratik davlat',
+                                'poytaxti':'Vashington',
+                                'aholisi':334_000_000,
+                                'maydoni':9_834_000,
+                                'valyuta':"tenge"
+                                },
+            }
+
+#for davlat, info in davlatlar.items():
+#    if davlat.lower()=='aqsh':
+#        davlat = davlat.upper()
+#    else:
+#        davlat = davlat.capitalize()
+#    print(f"\n{davlat} - to'liq nomi: {info['nomi'].title()}, \n{info['davlat tuzumi']}.\n"
+#          f"poytaxti: {info['poytaxti']} shahri.\n"
+#          f"aholisi: {info['aholisi']}.\n"
+#          f"maydoni: {info['maydoni']} kv*km.\n"
+#          f"milliy valyutasi: {info['valyuta']}."
+#          )
 
 
 
@@ -222,10 +279,18 @@ for ijod in shaxs['ijodi'].items():
 
 
 
-
-
-
-
+davlat = input('Qiziqtiruvchi davlat nomini kiriting: \n>>>').lower()
+if davlat in davlatlar:
+    info = davlatlar[davlat]
+    
+    print(f"\n{info['nomi'].title()}, \n{info['davlat tuzumi']}.\n"
+          f"poytaxti: {info['poytaxti']}.\n"
+          f"aholisi: {info['aholisi']}.\n"
+          f"maydoni: {info['maydoni']} kv*km.\n"
+          f"milliy valyutasi: {info['valyuta']}."
+          )
+else:
+    print("Bizda bu davlat haqida ma'lumot yo'q")
 
 
 
