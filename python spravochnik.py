@@ -23,7 +23,8 @@ Python = {  "boolean":"mantiqiy qiymat",
             "value()":"lug'at  qiymatini chiqarish",
             "set()":"takrorlashni olib tahslash",
             ".lower()":"matnni kichik harf qilish",
-            ".get()":"lug'at ichidan chiqarb, javob berish"
+            ".get()":"lug'at ichidan chiqarb, javob berish",
+            "while()":"toki, qachonki tsikli"
             }
 
   
