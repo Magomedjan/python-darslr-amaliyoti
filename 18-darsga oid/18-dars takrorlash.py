@@ -48,17 +48,50 @@ Created on Tue Apr 30 07:27:14 2024
 #for q in cars:
 #    print(f"{q}, ", end=' ')
 
-talabalar = ["Nodir", "Botir", "Jamshid", "Valijon"]
-b_talabalar = {}
-while talabalar:
-    talaba = talabalar.pop()
-    baho = input(f"{talaba}ni bahosini kiriting : ")
-    print(f"{talaba} {baho} bilan baholandi")
-    b_talabalar[talaba]=int(baho)
-print("Talabalar reytibgi")
-for t,b in b_talabalar.items():
-    print(f" - {t} {b} baho oldi")
+#talabalar = ["Nodir", "Botir", "Jamshid", "Valijon"]
+#b_talabalar = {}
+#while talabalar:
+#    talaba = talabalar.pop()
+#    baho = input(f"{talaba}ni bahosini kiriting : ")
+#    print(f"{talaba} {baho} bilan baholandi")
+#    b_talabalar[talaba]=int(baho)
+#print("Talabalar reytibgi")
+#for t,b in b_talabalar.items():
+#    print(f" - {t} {b} baho oldi")
+ 
+
+            #Amaliy mashg'ulot
     
+
+# 1/Foydalanuvchidan buyurtma qabul qiluvchi dastur yozing. 
+#   Mahsulotlar nomini birma-bir qabul qilib, yangi ro'yxatga joylang.
+print("Buyurtma olish dasturi")
+zakaz = []
+n = 1
+while True:
+    mahsulot = input("Savatga kerakli mahsulotni kiriting: ")
+    print(f"{n}-mahsulot tanlandi")
+    zakaz.append(mahsulot)
+    n+=1
+    takror_s = input("Yana mahsulot tanlaysizmi? \nha/yo'q: ")
+    if takror_s != 'ha':
+        break
+print("Siz tanlagan mahsulotlar: ")
+for z in zakaz:
+    print(f" - {z} ")    
+
+# 2/e-bozor uchun mahsulotlar va ularning narhlari lug'atini 
+#   shakllantiruvchi dastur yozing. Foydalanuvchidan lug'atga bir 
+#   nechta elementlar (mahsulot va uning narhi) kiritishni so'rang.
+
+
+
+
+# 3/Yuqoridagi ikki dasturni jamlaymiz. Foydalanuvchi buyurtmasi 
+#   ro'yxatidagi har bir mahsulotni e-bozordagi mahsulotlar 
+#   bilan solishitiring (tayyor ro'yxat ishlatishingiz mumkin). 
+#   Agar mahsuot e-bozorda mavjud bo'lsa mahuslot narhini chiqaring, 
+#   aks holda "Bizda bu mahsulot yo'q" degan xabarni kor'sating.
     
     
     
