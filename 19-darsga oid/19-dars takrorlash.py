@@ -28,8 +28,31 @@ def fish_chiqar(familiya, ism, sharif):
             )
 fish_chiqar('kamolova', 'sayyora', 'muxsinovna')
 
-def ty_hisobla(ism, tyil):
+def yosh_hisobla(ism, tyil):
     """Foydalanuvchi tug'ilgan yilini chiqaruvchi funktsiya"""
     print(f"{ism.title()} {2024-tyil} yoshda")
 
-ty_hisobla('sayyora', 1979)
+yosh_hisobla('sayyora', 1979)
+yosh_hisobla(tyil=1980, ism = 'olim')
+
+def yoshni_hisobla(tyil, jyil=2024):
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
