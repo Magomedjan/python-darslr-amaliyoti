@@ -75,41 +75,40 @@ Created on Sun May 26 22:46:46 2024
 
 
 
-def avto_info(Kompaniya, modeli, rangi, uzqutisi, yili, narxi=None):
+def avto_info(kompaniya, modeli, rangi, uzqutisi, yili, narxi=None):
     """avto bozor"""
-    avto = {'Kompaniya':Kompaniya,
-            'Model':modeli,
-            'Rang':rangi,
-            'Korobka':uzqutisi,
-            'Yil':yili,
-            'Narx':narxi            
+    avto = {'kompaniya':kompaniya,
+            'model':modeli,
+            'rang':rangi,
+            'korobka':uzqutisi,
+            'yil':yili,
+            'narx':narxi            
             }
     return avto
 print("Avtosalonda mavjud avtomashinalar ro'yxatini shakllantiramiz")
 avtolar = []
 while True:
     print("Quyidagi ma'lumotlarni kiriting!")
-    Kompaniya = input('Avtokompaniya nomi: ')
+    kompaniya = input('Avtokompaniya nomi: ')
     modeli = input('modeli: ')
     rangi = input('rangi: ')
     uzqutisi = input('uzatmalar qutisi turi: ')
     yili = input("Ishlab chiqarilgan yili: ")
-    narxi= input('narxi: ')
-    avtolar.append(avto_info(Kompaniya, modeli, rangi, uzqutisi, yili))
+    narxi = input('narxi: ')
+    avtolar.append(avto_info(kompaniya, modeli, rangi, uzqutisi, yili, narxi))
     surov = input('Yana avto kiritasizmi? y/n ')
     if surov == 'n':
         break
+    
 print("Salonda mavjud avomashina modellari:")
 for avto in avtolar:
-    if avto['Narx']:
-        narx = avto['Narx']
+    if avto['narx']:
+        narx = avto['narx']
     else:
         narx = "Noma'lum"
-    print(f"{avto['Kompaniya'].title()} kompaniyasini {avto['Model'].title()} "
-          f" avtomasinasi< rangi - {avto['Rang']}, {avto['Yil']} yilda i/ch, "
-          f"uzatmalar qutisi - {avto['Korobka']}, narxi - {narx}$")
-
-
+    print(f"{avto['kompaniya'].title()} kompaniyasini {avto['model'].title()} "
+          f" avtomashinasi, rangi-{avto['rang']}, {avto['yil']} yilda i/ch, "
+          f"uzatmalar qutisi-{avto['korobka']}, narxi-{narx}$")
 
 
 
