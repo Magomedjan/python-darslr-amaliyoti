@@ -32,7 +32,7 @@ Created on Fri May 31 22:42:15 2024
 #    va mijozlar degan ro'yxatni shakllantiring. Ro'yxatdagi mijozlar 
 #    haqidagi ma'lumotni konsolga chiqaring.
 
-#def user_info(ismi, familiyasi, t_yili, t_joyi, telefoni=None, e_maili=''):
+#ef user_info(ismi, familiyasi, t_yili, t_joyi, telefoni=None, e_maili=''):
 #    """Mijoz haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
 #    user = {'ism':ismi,
 #            'familiya':familiyasi,
@@ -75,10 +75,13 @@ Created on Fri May 31 22:42:15 2024
 
 def kattasini_ber(x, y, z):
     """son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya"""
-    
-
-
-
+    max = x
+    if y>=max:
+        max=y
+    if z>=max:
+        max=z
+    return max
+print(kattasini_ber(222, 55, 655))
 
 
 
@@ -86,6 +89,20 @@ def kattasini_ber(x, y, z):
 
 # 4/ Foydalanuvchidan aylaning radiusini qabul qilib olib, uning radiusini, 
 #    diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya yozing
+
+def aylana_ulcha(radius):
+    """ aylaning radiusini qabul qilib olib, uning radiusini, 
+    diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya"""
+    aylana={'radiusi':radius,
+           'diametri':radius*2,
+           'perimetri':(radius*2)*3.14159,
+           'yuzi':(radius**2)*3.14159
+            }
+    return aylana 
+
+print(aylana_ulcha(22))
+
+
 
 
 # 5/ Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing 
@@ -97,7 +114,8 @@ def kattasini_ber(x, y, z):
 #   ketma-ketligidagi sonlar ro'yxatni qaytaruvchi funksiya yozing.  
 #   Ta’rif: Har bir hadi o’zidan oldingi ikkita hadning yig’indisiga 
 #   teng bo’lgan ketma-ketlik Fibonachchi ketma-ketligi deyiladi. 
-#   Bunda boshlang’ish had ko’pincha 1 deb olinadi.  1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...
+#   Bunda boshlang’ish had ko’pincha 1 deb olinadi.  1, 1, 2, 3, 5, 
+#   8, 13, 21, 34, 55,...
 
 
 
