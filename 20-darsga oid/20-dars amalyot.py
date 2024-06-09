@@ -73,15 +73,15 @@ Created on Fri May 31 22:42:15 2024
 # 3/ Uchta son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya yozing
 
 
-def kattasini_ber(x, y, z):
-    """son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya"""
-    max = x
-    if y>=max:
-        max=y
-    if z>=max:
-        max=z
-    return max
-print(kattasini_ber(222, 55, 655))
+#def kattasini_ber(x, y, z):
+##    """son qabul qilib, ulardan eng kattasini qaytaruvchi funksiya"""
+#    max = x
+#    if y>=max:
+#        max=y
+#    if z>=max:
+#        max=z
+#    return max
+#print(kattasini_ber(222, 55, 655))
 
 
 
@@ -90,17 +90,17 @@ print(kattasini_ber(222, 55, 655))
 # 4/ Foydalanuvchidan aylaning radiusini qabul qilib olib, uning radiusini, 
 #    diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya yozing
 
-def aylana_ulcha(radius):
-    """ aylaning radiusini qabul qilib olib, uning radiusini, 
-    diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya"""
-    aylana={'radiusi':radius,
-           'diametri':radius*2,
-           'perimetri':(radius*2)*3.14159,
-           'yuzi':(radius**2)*3.14159
-            }
-    return aylana 
-
-print(aylana_ulcha(22))
+#def aylana_ulcha(radius):
+#    """ aylaning radiusini qabul qilib olib, uning radiusini, 
+#    diametrini, perimetri va yuzini lug'at ko'rinishida qaytaruvchi funksiya"""
+#    aylana={'radiusi':radius,
+#           'diametri':radius*2,
+#           'perimetri':(radius*2)*3.14159,
+#           'yuzi':(radius**2)*3.14159
+#            }
+#    return aylana #
+#
+#print(aylana_ulcha(22))
 
 
 
@@ -108,6 +108,93 @@ print(aylana_ulcha(22))
 # 5/ Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing 
 #    (tub sonlar —faqat birga va o'ziga qoldiqsiz bo'linuvchi, 1 dan katta 
 #    musbat sonlar)
+#def tubson_ber(min, max):
+#    """tub sonlar ro'yxatini qaytaruvchi funksiya"""
+#    tubson=[]
+#    for son in (min, max):
+#        if son%1 or son%son:
+#            tubson.append(son)
+#    return tubson
+#print(tubson_ber(2, 4, 56, 78, 544, 2134))
+
+
+def tub_sonlar_top(min, max):
+    tub_sonlar = []
+    for n in range(min, max + 1):
+        tub = True
+        if n == 1:
+            tub = False
+        elif n == 2:
+            tub = True
+        else:
+            for x in range(2, n):
+                if n % x == 0:
+                    tub = False
+        if tub:
+            tub_sonlar.append(n)
+
+    return tub_sonlar
+print(tub_sonlar_top(1, 44))
+
+
+
+
+def tub_sonlar_top(min, max):
+    tub_sonlar = []
+    for n in range(min, max + 1):
+        tub = True
+        if n <= 1:
+            tub = False
+        elif n == 2:
+            tub = True
+        else:
+            for x in range(2, int(n**0.5) + 1):
+                if n % x == 0:
+                    tub = False
+                    break
+        if tub:
+            tub_sonlar.append(n)
+
+    return tub_sonlar
+
+print(tub_sonlar_top(1, 44))
+
+
+
+#def tub_sonlar_top(min, max):
+##    tub_sonlar = []
+#    for n in range(max(min, 2), max + 1):
+#        tub = True
+#        # Оптимизированная проверка на простоту
+#        for x in range(2, int(n ** 0.5) + 1):
+##            if n % x == 0:
+ #               tub = False
+#                break
+#        
+#        if tub:
+#            tub_sonlar.append(n)
+#
+#    return tub_sonlar
+#print(tub_sonlar_top(1, 44))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #6/ Foydalanuvchidan son qabul qilib, shu son miqdoricha Fibonachchi 
