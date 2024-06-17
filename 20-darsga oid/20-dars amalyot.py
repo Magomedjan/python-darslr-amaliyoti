@@ -108,37 +108,26 @@ Created on Fri May 31 22:42:15 2024
 # 5/ Berilgan oraliqdagi tub sonlar ro'yxatini qaytaruvchi funksiya yozing 
 #    (tub sonlar —faqat birga va o'ziga qoldiqsiz bo'linuvchi, 1 dan katta 
 #    musbat sonlar)
-#def tubson_ber(min, max):
-#    """tub sonlar ro'yxatini qaytaruvchi funksiya"""
-#    tubson=[]
-#    for son in (min, max):
-#        if son%1 or son%son:
-#            tubson.append(son)
-#    return tubson
-#print(tubson_ber(2, 4, 56, 78, 544, 2134))
-
-
-def tub_sonlar_top(min, max):
-    tub_sonlar = []
-    for n in range(min, max + 1):
-        tub = True
-        if n == 1:
-            tub = False
-        elif n == 2:
-            tub = True
+def tubson_ber(min, max):
+    """tub sonlar ro'yxatini qaytaruvchi funksiya"""
+    tubson=[]
+    for son in range(min, max+1):
+        tub=True
+        if son == 1:
+            tub=False
+        elif son == 2:
+            tub=True
         else:
-            for x in range(2, n):
-                if n % x == 0:
+            for n in range(2,son):
+                if son % n == 0:
                     tub = False
         if tub:
-            tub_sonlar.append(n)
-
-    return tub_sonlar
-print(tub_sonlar_top(1, 44))
-
+            tubson.append(son)
+    return tubson
+print(tubson_ber(1, 134))
 
 
-
+ ################# 2-Variant
 def tub_sonlar_top(min, max):
     tub_sonlar = []
     for n in range(min, max + 1):
@@ -158,42 +147,6 @@ def tub_sonlar_top(min, max):
     return tub_sonlar
 
 print(tub_sonlar_top(1, 44))
-
-
-
-#def tub_sonlar_top(min, max):
-##    tub_sonlar = []
-#    for n in range(max(min, 2), max + 1):
-#        tub = True
-#        # Оптимизированная проверка на простоту
-#        for x in range(2, int(n ** 0.5) + 1):
-##            if n % x == 0:
- #               tub = False
-#                break
-#        
-#        if tub:
-#            tub_sonlar.append(n)
-#
-#    return tub_sonlar
-#print(tub_sonlar_top(1, 44))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
